@@ -1,7 +1,11 @@
 package epam.spring;
 
 public class Person {
-    private Pet pet;
+    private  Pet pet;
+
+    public Person() {
+        System.out.println("Constr Person created");
+    }
 
     public Person(Pet pet) {
         this.pet = pet;

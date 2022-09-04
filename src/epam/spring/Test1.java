@@ -5,5 +5,4 @@ public class Test1 {
         Pet pet = new Dog();
         pet.say();
     }
-
 }
