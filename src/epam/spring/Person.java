@@ -1,20 +1,25 @@
 package epam.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("personBean")
 public class Person {
     private Pet pet;
     private String surname;
     private int age;
 
-    public Person() {
-        System.out.println("Constr Person created");
-    }
-
-//    public Person(Pet pet) {
-//        System.out.println("Person bean is created");
-//        this.pet = pet;
+//    public Person() {
+//        System.out.println("Constr Person created");
 //    }
 
-//pet -> setPet
+    @Autowired
+    public Person(Pet pet) {
+        System.out.println("Person bean is created");
+        this.pet = pet;
+    }
+
+    //pet -> setPet
     public void setPet(Pet pet) {
         System.out.println("PetSetter created");
         this.pet = pet;
