@@ -1,5 +1,8 @@
 package epam.spring;
 
+import org.springframework.stereotype.Component;
+
+@Component
 class Dog implements Pet {
 //    private String name;
 
