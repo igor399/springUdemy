@@ -8,12 +8,12 @@ import org.springframework.stereotype.Component;
 //@Component("personBean")
 public class Person {
 
-    //    @Autowired
+//    @Autowired
 //    @Qualifier("dog")
     private Pet pet;
-//    @Value("${person.surname}")
+    @Value("${person.surname}")
     private String surname;
-//    @Value("${person.age}")
+    @Value("${person.age}")
     private int age;
 
 //    public Person() {
