@@ -13,3 +13,4 @@ class Cat implements Pet {
         System.out.println("Мифк!");
     }
 }
+
