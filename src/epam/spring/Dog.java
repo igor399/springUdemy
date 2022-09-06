@@ -1,6 +1,10 @@
 package epam.spring;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 @Component
 class Dog implements Pet {
@@ -18,11 +22,13 @@ class Dog implements Pet {
 //        this.name = name;
 //    }
 
-    protected void init(){
+    @PostConstruct
+    protected void init() {
         System.out.println("Class Dog: init method");
     }
 
-    private void destroy(){
+    @PreDestroy
+    private void destroy() {
         System.out.println("Class Dog : destroy method");
     }
 
