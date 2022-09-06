@@ -9,7 +9,8 @@
 
     <bean id="myPet"
           class="epam.spring.Dog"
-        scope = "prototype">
+          init-method="init"
+          destroy-method="destroy">
     </bean>
-    
+
 </beans>
