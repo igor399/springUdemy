@@ -9,8 +9,13 @@ import org.springframework.stereotype.Component;
 public class LoggingAspect {
 
 
-@Before("execution(public void getBook())") //pointCut
-    public void beforeGetBookAdvice(){
+    @Before("execution(public void get*())") //pointcut
+    public void beforeGetBookAdvice() {
         System.out.println("beforeGetBookAdvice: try to get a book");
+    }
+
+    @Before("execution(* returnBook())") //pointcut
+    public void beforeReturnBookAdvice() {
+        System.out.println("beforeReturnBookAdvice: try to return a book");
     }
 }
