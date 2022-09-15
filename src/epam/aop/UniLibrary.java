@@ -9,12 +9,23 @@ public class UniLibrary extends AbstractLibrary {
         System.out.println("We get book from UniLibrary " );
     }
 
-    protected String returnBook() {
+    public void returnBook() {
         System.out.println("We return book to UniLibrary");
-        return "OK";
     }
 
     public void getMagazine() {
         System.out.println("We get magazine from UniLibrary ");
+    }
+
+    public void returnMagazine() {
+        System.out.println("We return magazine to UniLibrary");
+    }
+
+    public void addBook(){
+        System.out.println("Add book to the library");
+    }
+
+    public void addMagazine(){
+        System.out.println("Add magazine to the library");
     }
 }
