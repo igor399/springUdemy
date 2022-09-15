@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class LoggingAspect {
 
 
-    @Before("execution(public void get*())") //pointcut
+    @Before("execution(public void getBook(epam.aop.Book))") //pointcut
     public void beforeGetBookAdvice() {
         System.out.println("beforeGetBookAdvice: try to get a book");
     }
