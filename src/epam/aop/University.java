@@ -18,15 +18,13 @@ public class University {
         students.add(st3);
     }
 
-    public List<Student> getStudents(){
+    public List<Student> getStudents() {
         System.out.println("getStudents method start working");
-        System.out.println(students.get(3));
+//        System.out.println(students.get(3));
         System.out.println("Inf from method getStudents : ");
         System.out.println(students);
         return students;
     }
-
-
 
 
 }

@@ -1,10 +1,7 @@
 package epam.aop.aspects;
 
 import epam.aop.Student;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.AfterThrowing;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -34,9 +31,14 @@ public class UniversityLoggingAspect {
 //        System.out.println("afterReturningGetStudentsLoggingAdvice : logging of getting List students List after working getStudents method");
 //    }
 
-    @AfterThrowing(pointcut = "execution(* getStudents())", throwing = "e")
-    public void afterThrowingGetStudentsLoggingAdvice(Throwable e) {
+//    @AfterThrowing(pointcut = "execution(* getStudents())", throwing = "e")
+//    public void afterThrowingGetStudentsLoggingAdvice(Throwable e) {
+//
+//        System.out.println("afterThrowingGetStudentsLoggingAdvice: logging exception" + e);
+//    }
 
-        System.out.println("afterThrowingGetStudentsLoggingAdvice: logging exception" + e);
+    @After("execution(* getStudents())")
+    public void afterGetStudentsLoggingAdvice(){
+        System.out.println("afterGetStudentsLoggingAdvice: logging normal end of working methods or throwing exception");
     }
 }

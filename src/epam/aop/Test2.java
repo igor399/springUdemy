@@ -14,8 +14,8 @@ public class Test2 {
         try {
             List<Student> students = university.getStudents();
             System.out.println(students);
-        }catch (Exception e){
-            System.out.println("Exception was caught -> " +e);
+        } catch (Exception e) {
+            System.out.println("Exception was caught -> " + e);
         }
         context.close();
     }
