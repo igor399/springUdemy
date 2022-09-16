@@ -31,7 +31,6 @@ public class LoggingAspect {
 //        System.out.println("allMethodsExceptReturnMagazineFromUnilib: writing Log #10");
 //    }
 
-
 //    @Pointcut("execution(* epam.aop.UniLibrary.get*())")
 //    private void allGetMethodsFromUniLib() {
 //    }
