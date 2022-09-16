@@ -3,28 +3,30 @@ package epam.aop.aspects;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-public class LoggingSecurityAspect {
+@Order(1)
+public class LoggingAspect {
 
-    @Pointcut("execution(* epam.aop.UniLibrary.*(..))")
-    private void allMethodsFromUnilib() {
-    }
-
-    @Pointcut("execution(public void epam.aop.UniLibrary.returnMagazine())")
-    private void returnMagazineFromUnilib() {
-    }
-
-    @Pointcut("allMethodsFromUnilib() && !returnMagazineFromUnilib()")
-    private void allMethodsExceptReturnMagazineFromUnilib() {
-    }
-
-    @Before("allMethodsExceptReturnMagazineFromUnilib()")
-    public void beforeAllMethodsExceptReturnMagazineFromUnilib() {
-        System.out.println("allMethodsExceptReturnMagazineFromUnilib: writing Log #10");
-    }
+//    @Pointcut("execution(* epam.aop.UniLibrary.*(..))")
+//    private void allMethodsFromUnilib() {
+//    }
+//
+//    @Pointcut("execution(public void epam.aop.UniLibrary.returnMagazine())")
+//    private void returnMagazineFromUnilib() {
+//    }
+//
+//    @Pointcut("allMethodsFromUnilib() && !returnMagazineFromUnilib()")
+//    private void allMethodsExceptReturnMagazineFromUnilib() {
+//    }
+//
+//    @Before("allMethodsExceptReturnMagazineFromUnilib()")
+//    public void beforeAllMethodsExceptReturnMagazineFromUnilib() {
+//        System.out.println("allMethodsExceptReturnMagazineFromUnilib: writing Log #10");
+//    }
 
 
 //    @Pointcut("execution(* epam.aop.UniLibrary.get*())")
@@ -55,17 +57,8 @@ public class LoggingSecurityAspect {
 //        System.out.println("beforeGetAndReturnLoggingAdvice: writing Log #3");
 //    }
 
-//    @Pointcut("execution( * get*())")
-//    private void allGetMethods() {
-//    }
-
-//    @Before("allGetMethods()")
-//    public void beforeGetLoggingAdvice() {
-//        System.out.println("beforeGetLoggingAdvice: try to get a book/magazine");
-//    }
-
-//    @Before("allGetMethods()")
-//    public void beforeGetSecurityAdvice() {
-//        System.out.println("beforeGetSecurityAdvice: chek rights on getting book/magazine");
-//    }
+    @Before("epam.aop.aspects.MyPointCuts.allGetMethods()")
+    public void beforeGetSecurityAdvice() {
+        System.out.println("beforeGetSecurityAdvice: chek rights on getting book/magazine");
+    }
 }
