@@ -24,6 +24,10 @@ public class Detail {
     @Column(name = "email")
     private String email;
 
+
+    @OneToOne(mappedBy = "empDetail", cascade = {CascadeType.REFRESH, CascadeType.PERSIST})
+    private Employee employee;
+
     public Detail() {
     }
 
@@ -31,6 +35,14 @@ public class Detail {
         this.city = city;
         this.phoneNumber = phoneNumber;
         this.email = email;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     public int getId() {

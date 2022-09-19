@@ -18,11 +18,11 @@ public class Test1 {
              Session session = factory.getCurrentSession()) {
 
 //            Session session = factory.getCurrentSession();
-//            Employee employee = new Employee("Igor", "Ch", "IT", 2700);
-//            Detail detail = new Detail("LA", "123456789", "teodor@gmail.com");
-//            employee.setEmpDetail(detail);
-//            session.beginTransaction();
-//            session.save(employee);
+            Employee employee = new Employee("Igor", "Ch", "IT", 2700);
+            Detail detail = new Detail("LA", "123456789", "teodor@gmail.com");
+            employee.setEmpDetail(detail);
+            session.beginTransaction();
+            session.save(employee);
 
 //            session.getTransaction().commit();
 
