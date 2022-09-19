@@ -1,4 +1,4 @@
-package hibernate_test2.entity;
+package hibernat_one_to_many_bi.entity;
 
 import javax.persistence.*;
 
@@ -21,26 +21,22 @@ public class Employee {
     private String surName;
 
 
-    @Column(name = "department")
-    private String department;
-
-
     @Column(name = "salary")
     private int salary;
 
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "details_id")
-    private Detail empDetail;
-
+    @ManyToOne(cascade = {CascadeType.PERSIST,
+            CascadeType.DETACH,
+            CascadeType.REFRESH,
+            CascadeType.MERGE})
+    @JoinColumn(name = "department_id")
+    private Department department;
 
     public Employee() {
     }
 
-    public Employee(String name, String surName, String department, int salary) {
-        this.firstName = name;
+    public Employee(String firstName, String surName, int salary) {
+        this.firstName = firstName;
         this.surName = surName;
-        this.department = department;
         this.salary = salary;
     }
 
@@ -68,14 +64,6 @@ public class Employee {
         this.surName = surName;
     }
 
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
     public int getSalary() {
         return salary;
     }
@@ -84,21 +72,20 @@ public class Employee {
         this.salary = salary;
     }
 
-    public Detail getEmpDetail() {
-        return empDetail;
+    public Department getDepartment() {
+        return department;
     }
 
-    public void setEmpDetail(Detail empDetail) {
-        this.empDetail = empDetail;
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", name='" + firstName + '\'' +
-                ", surname='" + surName + '\'' +
-                ", department='" + department + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", surName='" + surName + '\'' +
                 ", salary=" + salary +
                 '}';
     }
