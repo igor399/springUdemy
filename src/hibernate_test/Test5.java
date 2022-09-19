@@ -1,3 +1,5 @@
+package hibernate_test;
+
 import hibernate_test.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -17,7 +19,6 @@ public class Test5 {
 //            session.delete(emp);
 
             session.createQuery("delete Employee where firstName='Max'").executeUpdate();
-
             session.getTransaction().commit();
         }
     }
