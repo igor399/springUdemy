@@ -1,6 +1,8 @@
 package by.epam.lab.spring_mvc;
 
 
+import by.epam.lab.spring_mvc.validation.CheckEmail;
+
 import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -38,6 +40,16 @@ public class Employee {
     @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "pls enter valid phone")
     private String phoneNumber;
 
+    @CheckEmail(value = "mail.ru", message = "email must end with mail.ru")
+    private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getPhoneNumber() {
         return phoneNumber;
