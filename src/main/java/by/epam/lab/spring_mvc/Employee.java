@@ -1,10 +1,7 @@
 package by.epam.lab.spring_mvc;
 
 
-
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +13,8 @@ public class Employee {
     @NotBlank(message = "surname is required field ")
     private String surname;
 
-
+    @Min(value = 499, message = "salary must be greater than 500")
+    @Max(value = 4999, message = "salary must be less than 5000")
     private int salary;
 
 
@@ -36,6 +34,19 @@ public class Employee {
 
 
     private Map<String, String> langMap;
+
+    @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "pls enter valid phone")
+    private String phoneNumber;
+
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
 
     public Employee() {
         departments = new HashMap<>();
