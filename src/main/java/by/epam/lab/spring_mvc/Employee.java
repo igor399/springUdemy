@@ -1,17 +1,40 @@
 package by.epam.lab.spring_mvc;
 
+
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Employee {
+    @Size(min = 2, message = "enter valid name 2-30 characters")
     private String name;
+
+    @NotEmpty(message = "surname is required field ")
+    @NotBlank(message = "surname is required field ")
     private String surname;
+
+
     private int salary;
+
+
     private String department;
+
+
     private Map<String, String> departments;
+
+
     private String carBrand;
+
+
     private Map<String, String> carBrands;
+
+
     private String[] languages;
+
+
     private Map<String, String> langMap;
 
     public Employee() {
@@ -30,6 +53,7 @@ public class Employee {
         langMap.put("Deutsch", "DE");
         langMap.put("French", "FR");
     }
+
 
     public String[] getLanguages() {
         return languages;
