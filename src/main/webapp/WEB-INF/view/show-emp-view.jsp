@@ -2,13 +2,17 @@
 <html>
 
 <body>
+
 <h2>Emp welcome!</h2>
 <br>
 <br>
-<%--<h2> Your name: ${param.employeeName} </h2>--%>
+<br>
 
-Your name: ${nameAttribute}
-
+Your name: ${employee.name}
+<br>
+Your surname: ${employee.surname}
+<br>
+Your salary: ${employee.salary}
 
 </body>
 
