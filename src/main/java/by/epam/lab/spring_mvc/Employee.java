@@ -9,6 +9,7 @@ public class Employee {
     private int salary;
     private String department;
     private Map<String, String> departments;
+    private String carBrand;
 
     public Employee() {
         departments = new HashMap<>();
@@ -17,11 +18,12 @@ public class Employee {
         departments.put("Sales", "Sales");
     }
 
-    public Employee(String name, String surname, int salary, String department) {
-        this.name = name;
-        this.surname = surname;
-        this.salary = salary;
-        this.department = department;
+    public String getCarBrand() {
+        return carBrand;
+    }
+
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
     }
 
     public String getName() {
@@ -56,6 +58,14 @@ public class Employee {
         this.department = department;
     }
 
+    public Map<String, String> getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(Map<String, String> departments) {
+        this.departments = departments;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -64,13 +74,5 @@ public class Employee {
                 ", salary=" + salary +
                 ", department='" + department + '\'' +
                 '}';
-    }
-
-    public Map<String, String> getDepartments() {
-        return departments;
-    }
-
-    public void setDepartments(Map<String, String> departments) {
-        this.departments = departments;
     }
 }
