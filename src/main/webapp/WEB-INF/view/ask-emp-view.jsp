@@ -20,6 +20,11 @@
     Witch car do you prefer:
     <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
     <br><br>
+    Foreign language's:
+    <form:checkbox path="languages" value="English"/> EN
+    <form:checkbox path="languages" value="Deuth"/> DE
+    <form:checkbox path="languages" value="French"/> FR
+    <br><br>
     <br> <input type="submit" value="OK">
 </form:form>
 </body>
