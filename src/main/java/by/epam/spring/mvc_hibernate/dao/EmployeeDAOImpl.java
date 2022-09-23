@@ -1,6 +1,7 @@
 package by.epam.spring.mvc_hibernate.dao;
 
 import by.epam.spring.mvc_hibernate.entity.Employee;
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 import org.hibernate.SessionFactory;
@@ -34,5 +35,14 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         Session session = sessionFactory.getCurrentSession();
         Employee employee = session.get(Employee.class, id);
         return employee;
+    }
+
+    @Override
+    public void deleteEmployee(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        Query<Employee> query = session.createQuery("delete from Employee " +
+                "where id =: employeeId");
+        query.setParameter("employeeId", id);
+        query.executeUpdate();
     }
 }
