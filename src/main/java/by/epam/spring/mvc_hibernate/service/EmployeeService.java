@@ -5,6 +5,7 @@ import by.epam.spring.mvc_hibernate.entity.Employee;
 import java.util.List;
 
 public interface EmployeeService {
-    public  List<Employee> getAllEmployees();
+    public List<Employee> getAllEmployees();
 
+    public void saveEmployee(Employee employee);
 }
