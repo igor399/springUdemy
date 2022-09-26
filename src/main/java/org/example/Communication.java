@@ -42,7 +42,7 @@ public class Communication {
             System.out.println(responseEntity.getBody());
         }else {
             restTemplate.put(URL, employee);
-            System.out.println("Emp with id" + id + " was updated");
+            System.out.println("Emp with id " + id + " was updated");
         }
     }
 
