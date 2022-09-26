@@ -1,6 +1,6 @@
-package by.epam.spring.mvc_hibernate.dao;
+package by.epam.spring.rest.dao;
 
-import by.epam.spring.mvc_hibernate.entity.Employee;
+import by.epam.spring.rest.entity.Employee;
 import org.hibernate.Query;
 import org.hibernate.Session;
 

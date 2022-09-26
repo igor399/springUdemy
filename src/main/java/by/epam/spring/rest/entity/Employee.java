@@ -1,4 +1,4 @@
-package by.epam.spring.mvc_hibernate.entity;
+package by.epam.spring.rest.entity;
 
 import javax.persistence.*;
 

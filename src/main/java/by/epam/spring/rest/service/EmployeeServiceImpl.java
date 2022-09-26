@@ -1,7 +1,7 @@
-package by.epam.spring.mvc_hibernate.service;
+package by.epam.spring.rest.service;
 
-import by.epam.spring.mvc_hibernate.dao.EmployeeDAO;
-import by.epam.spring.mvc_hibernate.entity.Employee;
+import by.epam.spring.rest.dao.EmployeeDAO;
+import by.epam.spring.rest.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

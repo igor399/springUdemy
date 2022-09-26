@@ -1,7 +1,7 @@
-package by.epam.spring.mvc_hibernate.controller;
+package by.epam.spring.rest.controller;
 
-import by.epam.spring.mvc_hibernate.entity.Employee;
-import by.epam.spring.mvc_hibernate.service.EmployeeService;
+import by.epam.spring.rest.entity.Employee;
+import by.epam.spring.rest.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
