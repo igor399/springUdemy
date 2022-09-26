@@ -14,8 +14,11 @@ public class App {
 //        List<Employee> allEmployees = communication.getllEmployees();
 //        System.out.println(allEmployees);
 
-        Employee empById = communication.getEmployee(7);
-        System.out.println(empById);
+//        Employee empById = communication.getEmployee(7);
+//        System.out.println(empById);
+
+        Employee employee = new Employee("Igor", "Ch", "IT", 2700);
+        communication.saveEmployee(employee);
 
 
     }
