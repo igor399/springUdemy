@@ -16,7 +16,7 @@ public class Communication {
     @Autowired
     private RestTemplate restTemplate;
 
-    public List<Employee> getllEmployees() {
+    public List<Employee> getAllEmployees() {
         ResponseEntity<List<Employee>> responseEntity = restTemplate.exchange(
                 URL,
                 HttpMethod.GET,
