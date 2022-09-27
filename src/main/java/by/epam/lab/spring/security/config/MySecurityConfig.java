@@ -4,6 +4,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.User.UserBuilder;
 
 @EnableWebSecurity
 public class MySecurityConfig extends WebSecurityConfigurerAdapter {
@@ -12,9 +13,8 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
 
-        User.UserBuilder userBuilder = User.withDefaultPasswordEncoder();
+        UserBuilder userBuilder = User.withDefaultPasswordEncoder();
         auth.inMemoryAuthentication()
-
                 .withUser(userBuilder
                         .username("doubleDamage")
                         .password("doubleDamage")
