@@ -9,10 +9,10 @@
         <version>2.7.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>by.epma.lab.springboot</groupId>
+    <artifactId>spring_data_jpa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
+    <name>spring_data_jpa</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
