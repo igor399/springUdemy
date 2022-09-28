@@ -45,4 +45,10 @@ public class MyRestController {
         employeeService.deleteEmployee(id);
         return "Employee with id " + id + " was deleted";
     }
+
+    @GetMapping("/employees/name/{name}")
+    public List<Employee> showAllEmpsByName(@PathVariable String name) {
+        List<Employee> employees = employeeService.findAllByName(name);
+        return employees;
+    }
 }
